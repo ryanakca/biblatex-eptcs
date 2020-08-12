@@ -1,0 +1,35 @@
+\documentclass{eptcs}
+\usepackage{hyperref}
+\usepackage[style=eptcs,related=false]{biblatex}
+\addbibresource[label=c]{contrived.bib}
+\addbibresource[label=r]{real.bib}
+\begin{document}
+
+\begin{refsection}[c]
+  In this section, we cite a variety of contrived examples to illustrate the EPTCS style.
+  For example, \textcite{article_1992:_artic_arxiv_with} has link to arxiv and a doi.
+  Some works are unpublished~\cite{unpublished_2020:_unpub_work}.
+  \textcite{book_2055:_my_inbook_chapt,collection_2020:_my_collec} did publish their stuff though.
+  \textcite{article_1992:_artic_with_doi} would argue that our choice of last names was not particularly original.
+  We can also cite a range of entries at once: \cite{article_1992:_artic_arxiv_with,article_1992:_artic_with_doi,article_1992:_artic_with_eid_paget,article_1992:_artic_with_page_range}.
+  \nocite{*}
+  \printbibliography[title={Contrived Examples}]
+\end{refsection}
+
+\clearpage
+
+\begin{refsection}[r]
+  In this section, we have actual bibliography entries.
+  We have multivolume collections~\cite{abramsky_1992:_handb_logic_comput_scien} with individual volumes~\cite{abramsky_2001:_logic_algeb_method, abramsky_1995:_seman_struc, abramsky_1995:_seman_model, abramsky_1993:_backg_comp_struct, abramsky_1992:_backg_mathem_struct}.
+  \textcite{tennent_1995:_denot_seman, abramsky_jung_1995:_domain_theor} wrote entries in some of these volumes.
+
+  We have multivolume books~\cite{girard_2006:_le_point_aveug, girard_2007:_vers_limper, girard_2006:_vers_la_perfec}.
+
+  We have conference proceedings.
+  Note that biblatex allows for conference proceedings to have a ``title'' on top of a conference (event) name.
+  For example, the title of \cite{2002:_proof_system_reliab} is different from the conference/event name.
+  We note that that proceedings is lacking an editor.
+  \nocite{*}
+  \printbibliography[title={Real Examples}]
+\end{refsection}
+\end{document}
