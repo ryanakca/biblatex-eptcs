@@ -39,10 +39,10 @@
 %% visually consistent with the preexisting BibTeX style. Individual
 %% changes are documented below.
 
-\ProvidesFile{eptcs.bbx}[2020/08/12 v0.2 EPTCS biblatex style]
+\ProvidesFile{eptcs.bbx}[2020/08/14 v0.3 EPTCS biblatex style]
 \RequireBiber[3]
 
-% Requires at least biblatex 3.8 for \DeclareDelimFormat
+% Requires at least biblatex 3.8 (2017-11-04) for \DeclareDelimFormat
 
 % The default style is based off of the "standard" biblatex style
 % and uses the numeric-comp citation style.
@@ -352,10 +352,12 @@
   \usebibmacro{event}%
   \setunit{\addcomma\addspace}
   \printfield{volumes}%
-  \newunit\newblock
+  \setunit*{\addcomma\space}
   \usebibmacro{series+number}%
   \setunit{\addcomma\space}
   \usebibmacro{organization+publisher+location}%
+  \setunit{\addcomma\addspace}
+  \usebibmacro{chapter+pages}%
   \setunit{\addcomma\addspace}
   \usebibmacro{doi/issn+eprint+url}%
   \newunit\newblock
